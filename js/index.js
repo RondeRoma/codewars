@@ -43,19 +43,65 @@
 
 // console.log(greet(Roma));
 
-const makeDish = function(sheffName, dish) {
-  console.log(`${sheffName} gotovit ${dish}`);
-};
-const makeSheff = function(name) {
-  return function(dish) {
-    console.log(`${name} gotovit ${dish}`);
-  };
-};
+// const makeDish = function(sheffName, dish) {
+//   console.log(`${sheffName} gotovit ${dish}`);
+// };
+// const makeSheff = function(name) {
+//   return function(dish) {
+//     console.log(`${name} gotovit ${dish}`);
+//   };
+// };
 
-const mango = makeSheff("Mango");
-const poly = makeSheff("Poly");
+// const mango = makeSheff("Mango");
+// const poly = makeSheff("Poly");
 
-mango('chuletas');
-poly('tea');
-poly('golubtsy');
-mango('borshch');
+// mango('chuletas');
+// poly('tea');
+// poly('golubtsy');
+// mango('borshch');
+
+// const result = []
+// for (let i = min; i <= max; i += step) {
+//   result.push(i)
+// }
+
+// return result;
+
+// function riders(stations) {
+//     let riders = 0;
+//     let total = 0;
+//     for (let i = 0; i < stations.length; i+=1){
+//     total += stations[i]
+//     if (total > 100){
+//     riders += 1
+//     total = 0;
+//     i-=1}}
+//     return riders + 1
+//   }
+
+//       console.log(riders([18, 15]));
+
+//       //alternative:
+
+//       const riders = stations =>
+//   stations.reduce(([dist, rid], val) => val + dist > 100 ? [val, ++rid] : [dist + val, rid], [0, 1])[1];
+
+
+// TASK BANJO
+// function areYouPlayingBanjo(name) {
+//    return name[0] === 'R' || name[0] === 'r' ? `${name}  plays banjo` : `${name}  does not play banjo`
+//         }
+// //function areYouPlayingBanjo= name =>  name[0] === 'R' || name[0] === 'r' ? `${name}  plays banjo` : `${name} + does not play banjo`
+// // return name;
+// // }
+//    console.log(areYouPlayingBanjo("Robert"));
+
+
+   //7 kyu Find min and max
+   function getMinMax(arr) {
+    return arr.reduce(({min, max}, v) => ({
+      min: min < v ? min : v,
+      max: max > v ? max : v,
+    }), { min: arr[0], max: arr[0] });
+  }
+  console.log(getMinMax([1]),[1,1]);
