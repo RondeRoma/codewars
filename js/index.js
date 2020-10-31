@@ -1,4 +1,4 @@
-//TASK 1 
+//TASK 1 ----------------------------------------------------------------------------
 // function removeChar(str){
 //     if (str.length >2){
 //         return str.slice(1, -1);
@@ -6,7 +6,7 @@
 //    return str;
 //    };
    
-//TASK2 Detect Pangram
+//TASK2 Detect Pangram --------------------------------------------------------------------
 // function isPangram(string){
 //     let abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
 //           'v', 'w', 'x', 'y', 'z'];
@@ -30,7 +30,7 @@
 //   }
 //   console.log(findUniq([ 0, 1, 0 ]), 1);
 
-//MIRRORS MIRRORS
+//MIRRORS MIRRORS --------------------------------------------------------------------------------
 // function mirror(data) {
 //   let sortedArr = data.slice().sort((a,b) => a - b);
 //   let reversedArr = data.slice().sort((a,b) => b - a);
@@ -87,7 +87,7 @@
 //   stations.reduce(([dist, rid], val) => val + dist > 100 ? [val, ++rid] : [dist + val, rid], [0, 1])[1];
 
 
-// TASK BANJO
+// TASK BANJO ---------------------------------------------------------------------
 // function areYouPlayingBanjo(name) {
 //    return name[0] === 'R' || name[0] === 'r' ? `${name}  plays banjo` : `${name}  does not play banjo`
 //         }
@@ -97,11 +97,67 @@
 //    console.log(areYouPlayingBanjo("Robert"));
 
 
-   //7 kyu Find min and max
-   function getMinMax(arr) {
-    return arr.reduce(({min, max}, v) => ({
-      min: min < v ? min : v,
-      max: max > v ? max : v,
-    }), { min: arr[0], max: arr[0] });
+//    //7 kyu Find min and max ------------------------------------------------------
+// //    function getMinMax(arr) {
+// //     return arr.reduce(({min, max}, v) => ({
+// //       min: min < v ? min : v,
+// //       max: max > v ? max : v,
+// //     }), { min: arr[0], max: arr[0] });
+// //   }
+// //   console.log(getMinMax([1]),[1,1]);
+
+//   function getMinMax(arr) {
+//       const result = [];
+//       arr.sort(function(a,b){
+//           return a-b
+//       })
+//       result.push(arr[0]);
+//       result.push(arr[arr.length-1]);
+//       return result;
+//   }
+
+// 8 KYU Grasshopper - Function syntax debugging ----------------------------------------------
+
+// function main (verb, noun) {
+//   return verb + noun
+// }
+
+// 8 kyu // Holiday VI - Shark Pontoon ---------------------------------------------------------
+
+// function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+//  if(dolphin){
+//     sharkSpeed /= 2;
+//   }
+//   return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
+// }
+
+// 8 kyu // Smallest unused ID -------------------------------------------------------
+// function nextId(ids){
+//   for (i = 0; i < ids.length; i++) { 
+//     if (ids.indexOf(i) == -1){
+//       return i;
+//     }
+//   }
+//   return ids.length;
+// }
+
+// 8 kyu // Grasshopper - Summation ---------------------------------------------------
+
+// var summation = function (num) {
+//   let result = 0;
+//   for (let i=0; i<=num; i++){
+//     result +=i;
+//   }
+//   return result;
+// }
+
+
+
+// 8 kyu Invert values -----------------------------------------------------------------------------
+function invert(array) {
+  let newArray = [];
+  for (let i=0; i< array.length; i++) {
+    newArray.push(-array[i]);
   }
-  console.log(getMinMax([1]),[1,1]);
+   return newArray;
+}
