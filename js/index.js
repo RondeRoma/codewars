@@ -153,11 +153,43 @@
 
 
 
-// 8 kyu Invert values -----------------------------------------------------------------------------
-function invert(array) {
-  let newArray = [];
-  for (let i=0; i< array.length; i++) {
-    newArray.push(-array[i]);
-  }
-   return newArray;
-}
+// // 8 kyu Invert values -----------------------------------------------------------------------------
+// function invert(array) {
+//   let newArray = [];
+//   for (let i=0; i< array.length; i++) {
+//     newArray.push(-array[i]);
+//   }
+//    return newArray;
+// }
+
+
+
+///// Training JS #15: Methods of Number object--toFixed(), toExponential() and toPrecision() ----------------------------------------
+
+// const howManySmaller = (arr, n) =>
+//   arr.map(num => Number(num.toFixed(2))).filter(num => num < n).length;
+
+//   console.log([1.1888,1.1868,1.1838],1.19);
+
+
+
+
+
+//  // Training JS #18: Methods of String object--concat() split() and its good friend join() ---------------------------------------
+
+// function splitAndMerge(string, separator) {
+//   return string.split(' ').map(splited => splited.split('').join(separator)).join(' ')
+// }
+
+
+
+
+// // Training JS #17: Methods of String object--indexOf(), lastIndexOf() and search() ----------------------------------
+
+// const firstToLast = (str,c) => str.includes(c) ? str.lastIndexOf(c) - str.indexOf(c) : -1;
+
+// //Training JS #16: Methods of String object--slice(), substring() and substr() ----------------------------------------
+
+// const cutIt = arr => arr.map(str => str.slice(0, Math.min(...arr.map(str=> str.length))))
+
+
