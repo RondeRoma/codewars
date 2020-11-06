@@ -193,3 +193,36 @@
 // const cutIt = arr => arr.map(str => str.slice(0, Math.min(...arr.map(str=> str.length))))
 
 
+// const shuffleIt=(arr,...restProps)=>{
+//     for (let key in restProps)  
+//     {
+//       let [x,y] = [restProps[key][0], restProps[key][1]];
+//       [arr[x],arr[y]] = [arr[y],arr[x]];
+//     }
+//     return arr;
+//   }
+//   console.log(shuffleIt([1,2,3,4,5],[1,2]));
+
+/////// Training JS #20: Methods of String object--charAt() charCodeAt() and fromCharCode()-------------------------
+// const topSecret = str => {
+//     let chars = str.split('');
+  
+//     for (let i = 0; i < chars.length; i += 1) {
+//       if ((chars[i].match(/[abc]/gi))) {
+//         chars[i] = String.fromCharCode(chars[i].charCodeAt() + -3 + 26);
+//        } else if (chars[i].match(/[!"#$%&'()+,-./0 12345\n6789:;<=>?@]/g)) {
+//         chars[i] = String.fromCharCode(chars[i].charCodeAt());
+//       } else {
+//         chars[i] = String.fromCharCode(chars[i].charCodeAt() - 3);
+//       }
+//     }
+//     return chars.join('');
+//   };
+  
+//   console.log(topSecret('Ab. +dph lv Mkq'));
+//   console.log(topSecret('wklv lv dq ha6psoh'));
+//   console.log(topSecret('Khoor Zruog!'));
+
+//   answer1 = '3743';
+// answer2 = 'UePJ';
+// answer3 = 'Nail scissors';
