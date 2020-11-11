@@ -227,26 +227,192 @@
 // answer2 = 'UePJ';
 // answer3 = 'Nail scissors';
 
-const infiniteLoop = (arr,d,n) => {
+// const infiniteLoop = (arr,d,n) => {
  
-    // for (let i = 0; i <= arr.length; i+=1){
-        for (let j = 1; j <= n; j+=1){
-    if (d === "left"){
-      arr[2].push(arr[0].shift());
-      arr[1].push(arr[2].shift());
-      arr[0].push(arr[1].shift());
-    }
-    if (d === "right"){
-        arr[1].unshift(arr[0].pop());
-        arr[2].unshift(arr[1].pop());
-        arr[0].unshift(arr[2].pop());
+//     // for (let i = 0; i <= arr.length; i+=1){
+//         for (let j = 1; j <= n; j+=1){
+//     if (d === "left"){
+//       arr[2].push(arr[0].shift());
+//       arr[1].push(arr[2].shift());
+//       arr[0].push(arr[1].shift());
+//     }
+//     if (d === "right"){
+//         arr[1].unshift(arr[0].pop());
+//         arr[2].unshift(arr[1].pop());
+//         arr[0].unshift(arr[2].pop());
      
-    }
-}
+//     }
+// }
     
-    return arr;
-}
-  console.log(infiniteLoop( [[1,2,3],[4,5,6],[7,8,9]],"right",2));
-  console.log(infiniteLoop( [[1,2,3],[4,5,6],[7,8,9]],"left",1));
+//     return arr;
+// }
+//   console.log(infiniteLoop( [[1,2,3],[4,5,6],[7,8,9]],"right",2));
+//   console.log(infiniteLoop( [[1,2,3],[4,5,6],[7,8,9]],"left",1));
     
+
+//Training 24
+
+// function threeInOne(arr){
+//     let array = [];
+//     for (let i=0; i<= arr.length; i+=3){
+//  array.push(arr.slice (i, i+3))
+//     }
+
+
+
+// return array.map(el=>el.reduce((acc, el) => acc + el, 0 )).slice(0, -1);
+
+//   }
+//   const threeInOne = arr =>
+//   [...Array(arr.length / 3)].map((_, idx) => arr.slice(idx *= 3, idx + 3).reduce((pre, val) => pre + val));
+
+//   console.log(threeInOne( [1,2,3]));
+//   console.log(threeInOne( [1,2,3,4,5,6] ));
+//   console.log(threeInOne( [1,2,3,4,5,6,7,8,9]));
   
+
+// const monkeyCount = n =>  Array.from({ length: n }, (_, k)=> k +1);
+    
+// console.log(monkeyCount(9));
+    //Array.from({ length: 5 }, (v, k) => k); 
+    // return Array.from({ length: n }, (v, k) => k);
+
+
+
+    // Training 25
+    // function sortIt(arr) {
+    //     let copy = arr.slice();
+    //     let count = copy.length;
+    //     let mysort = {};
+    //     let uniqueArray = [];
+      
+    //     let ks = [];
+    //     for (let value of copy) {
+    //       ks[value] = (ks[value] || 0) + 1;
+    //     }
+      
+    //     let multiArray = [];
+    //     for (let i in copy) {
+    //       if (ks[copy[i]] > 1) {
+    //         multiArray.push(copy[i]);
+    //       }
+    //     }
+    // for (let key in mysort) {
+    //          if (mysort[key] > key) multiArray.push(+key);
+    //        }  
+
+    //     for (let i = 0; i < count; i++) {
+    //       let k = copy[i];
+    //       if (mysort[k] === undefined) {
+    //         mysort[k] = 1;
+    //       } else {
+    //         mysort[k]++;
+    //       }
+    //     }
+      
+    //     for (let key in mysort) {
+    //       if (mysort[key] === 1) uniqueArray.push(+key);
+    //     }
+      
+    //     let result = [...uniqueArray.sort((a, b) => b - a), ...multiArray.sort((a, b) => b - a)];
+    //     return result;
+    //   }
+
+    //   console.log(sortIt([1, 1, 1, 2, 2, 3]));
+    //   console.log(sortIt([1, 1, 1, 2, 2, 2, 3, 3, 3]));
+    //   console.log(sortIt([1, 2, 3, 4, 4, 5, 5, 6, 6]));
+    //   console.log(sortIt([1,3,3,5,2,2,4,6,6,7,7,7]));
+
+
+// sortIt([1,1,1,2,2,3]) should return [3,2,2,1,1,1]
+// because [1,1,1,2,2,3] has one 3, two 2 and three 1
+
+
+// function sortIt(arr) {
+//     let uniqueArray = [];
+//     let multyArray = arr.slice().sort();
+   
+
+// for (let i=0; i<multyArray.length; i){
+//     let count = 1;
+//     while(true){
+//         if (multyArray[i] === multyArray[i+count]) 
+//             count +=1;
+//          else break;
+//     }
+// console.log(multyArray);
+
+//     uniqueArray.push({'number': multyArray[i], count: count})
+//     i+= count
+// }
+// console.log(uniqueArray);
+// uniqueArray.sort((a,b) => b.number - a.number)
+// uniqueArray.sort((a,b) => a.count - b.count)
+
+// multyArray = []
+// for (let i=0; i<uniqueArray.length; i++) {
+//     for (let k=1; k<= uniqueArray[i].count; k++){
+//         multyArray.push(uniqueArray[i].number)
+//     }
+// }
+// return uniqueArray
+// }
+
+
+// console.log(sortIt([1, 1, 1, 2, 2, 3]));
+// console.log(sortIt([1, 1, 1, 2, 2, 2, 3, 3, 3]));
+// console.log(sortIt([1, 2, 3, 4, 4, 5, 5, 6, 6]));
+// console.log(sortIt([1,3,3,5,2,2,4,6,6,7,7,7]));
+
+
+// function between(a, b) {
+//     let result = [];
+//    while(a <= b){
+//        }
+//    result.push(a++);
+//    }
+
+
+
+// var a=[1,2,3,4,5];
+// a.every(x=>{
+//   console.log(x); 
+//   return x<4;
+// })
+
+
+// function mirrorImage(arr){
+//     for(let i=0;i<arr.length-1;i++){
+//       if(arr[i].toString().split('').reverse().join('') === arr[i+1].toString()) {
+//       return [arr[i],arr[i+1]];}
+//     }
+//     return [-1,-1]}
+
+
+    // function mirrorImage(arr){
+    //     let a = 0
+    //   let b = 0;
+      
+    //   for(let i=0;i<arr.length-1;i++){
+    //     a = arr[i];
+    //   b = arr[i+1]
+        
+            
+    //       if( a === Number(toString(b).split('').reverse().join(''))) {
+    //       return [a, b];}
+       
+    //     return [-1,-1]
+    //   }
+    //    };
+
+    // function mirrorImage(arr){
+    //     arr.some((i)=> {
+            
+    //         if(arr[i].toString().split('').reverse().join('') === arr[i+1].toString()) {
+    //         return [arr[i], arr[i+1]];}
+         
+    //       return [-1,-1]
+    //     })
+    //      };
+
+    //    console.log([11,22,33,33,22,11]);
