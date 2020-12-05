@@ -462,4 +462,13 @@
 //6 kyu Find the odd int -----------------------------------------------
 // const findOdd = (A) => A.find((a, b, c) => c.filter(el => el === a).length % 2 === 1);
 
+// I am very very - надо решиииить!!!____====------------------------------------
+// function iam(input) {
+//     return input.split(' ');
+// }
 
+
+
+// console.log(iam('happy'));
+// console.log(iam()()('tall'));
+// console.log(iam()()('tall and ') + iam()('funny'));
