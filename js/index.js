@@ -467,8 +467,29 @@
 //     return input.split(' ');
 // }
 
-
-
 // console.log(iam('happy'));
 // console.log(iam()()('tall'));
 // console.log(iam()()('tall and ') + iam()('funny'));
+
+//21
+function findLongestWord(string) {
+  let word = string.split(" ");
+  let longestWord = 0;
+  let result = "";
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i].length > longestWord) {
+      longestWord = word[i].length;
+      result = word[i];
+    }
+  }
+  return result;
+}
+
+function findLongestWord(string) {
+  var longestWord = string.split(" ").reduce(function (longest, currentWord) {
+    return currentWord.length > longest.length ? currentWord : longest;
+  }, "");
+  return longestWord.length;
+}
+findLongestWord("The quick brown fox jumped over the lazy dog");
